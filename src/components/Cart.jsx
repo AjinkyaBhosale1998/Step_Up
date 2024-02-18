@@ -1,4 +1,6 @@
-export default function Cart({ items, onUpdateItemQuantity }) {
+import React from 'react';
+
+const Cart = ({ items, onUpdateItemQuantity }) => {
   const totalPrice = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -38,4 +40,6 @@ export default function Cart({ items, onUpdateItemQuantity }) {
       </p>
     </div>
   );
-}
+};
+
+export default Cart;

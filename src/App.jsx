@@ -1,15 +1,14 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
 import Header from './components/Header.jsx';
 import Shop from './components/Shop.jsx';
 import { DUMMY_PRODUCTS } from './dummy-products.js';
 
-function App() {
+const App = () => {
   const [shoppingCart, setShoppingCart] = useState({
     items: [],
   });
 
-  function handleAddItemToCart(id) {
+  const handleAddItemToCart = (id) => {
     setShoppingCart((prevShoppingCart) => {
       const updatedItems = [...prevShoppingCart.items];
 
@@ -38,9 +37,9 @@ function App() {
         items: updatedItems,
       };
     });
-  }
+  };
 
-  function handleUpdateCartItemQuantity(productId, amount) {
+  const handleUpdateCartItemQuantity = (productId, amount) => {
     setShoppingCart((prevShoppingCart) => {
       const updatedItems = [...prevShoppingCart.items];
       const updatedItemIndex = updatedItems.findIndex(
@@ -63,7 +62,7 @@ function App() {
         items: updatedItems,
       };
     });
-  }
+  };
 
   return (
     <>
@@ -74,6 +73,6 @@ function App() {
       <Shop onAddItemToCart={handleAddItemToCart} />
     </>
   );
-}
+};
 
 export default App;

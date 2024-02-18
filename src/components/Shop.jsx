@@ -1,7 +1,8 @@
+import React from 'react';
 import { DUMMY_PRODUCTS } from '../dummy-products.js';
 import Product from './Product.jsx';
 
-export default function Shop({ onAddItemToCart }) {
+const Shop = ({ onAddItemToCart }) => {
   return (
     <section id="shop">
       <h2>Elegant footwear for everyone 👟🔥</h2>
@@ -15,4 +16,6 @@ export default function Shop({ onAddItemToCart }) {
       </ul>
     </section>
   );
-}
+};
+
+export default Shop;

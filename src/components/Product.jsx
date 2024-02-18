@@ -1,11 +1,6 @@
-export default function Product({
-  id,
-  image,
-  title,
-  price,
-  description,
-  onAddToCart,
-}) {
+import React from 'react';
+
+const Product = ({ id, image, title, price, description, onAddToCart }) => {
   return (
     <article className="product">
       <img src={image} alt={title} />
@@ -21,4 +16,6 @@ export default function Product({
       </div>
     </article>
   );
-}
+};
+
+export default Product;
